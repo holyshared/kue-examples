@@ -1,7 +1,7 @@
 require('toml-require').install();
 
 var messenger = require('./messenger').server;
-var options = require('./config.toml').server;
+var options = require('./options');
 var actions = require('./actions');
 
 var server = messenger(options);
