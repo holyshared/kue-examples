@@ -23,6 +23,7 @@ MessengerServer.prototype.start = function () {
     this._logger.info('job registered: ' + processor.type);
     this._server.process(processor.type, processor.action);
   }, this);
+  this._server.watchStuckJobs();
   this._logger.info('server started');
   return this;
 }
