@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/holyshared/kue-examples#readme",
   "dependencies": {
-    "kue": "^0.10.5"
+    "kue": "^0.10.5",
+    "toml": "^2.3.0",
+    "toml-require": "^1.1.0"
   }
 }
