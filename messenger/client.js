@@ -9,12 +9,15 @@ MessengerClient.prototype.register = function (params) {
   var self = this;
 
   return new Promise(function (resolve, reject) {
-    self.client.create('example', params).delay(1000).save(function (err) {
-      if (err) {
-        return reject(err);
-      }
-      resolve();
-    });
+    self.client.create('example', params)
+      .delay(1000)
+      .removeOnComplete(true)
+      .save(function (err) {
+        if (err) {
+          return reject(err);
+        }
+        resolve();
+      });
   });
 }
 

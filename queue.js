@@ -7,6 +7,5 @@ client(options).register({
   message: 'example'
 }).then(function () {
   console.log('ok!');
+  process.exit();
 });
-
-process.exit();
