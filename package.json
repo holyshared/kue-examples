@@ -1,0 +1,22 @@
+{
+  "name": "kue-examples",
+  "version": "1.0.0",
+  "description": "kue examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holyshared/kue-examples.git"
+  },
+  "author": "Nortiaka Horio <holy.share.design@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/holyshared/kue-examples/issues"
+  },
+  "homepage": "https://github.com/holyshared/kue-examples#readme",
+  "dependencies": {
+    "kue": "^0.10.5"
+  }
+}
