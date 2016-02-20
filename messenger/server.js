@@ -16,9 +16,9 @@ MessengerServer.prototype.registerAll = function (processors) {
   return this;
 }
 
-MessengerServer.prototype.start = function () {
-}
-
 module.exports = function (options) {
-  return new MessengerServer(options);
+  if (!MessengerServer.__instance__) {
+    MessengerServer.__instance__ = new MessengerServer(options);
+  }
+  return MessengerServer.__instance__;
 };

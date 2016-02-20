@@ -22,5 +22,8 @@ MessengerClient.prototype.register = function (params) {
 }
 
 module.exports = function (options) {
-  return new MessengerClient(options);
+  if (!MessengerClient.__instance__) {
+    MessengerClient.__instance__ = new MessengerClient(options);
+  }
+  return MessengerClient.__instance__;
 };
