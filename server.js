@@ -5,14 +5,17 @@ var options = require('./config.toml').server;
 var actions = require('./actions');
 
 var server = messenger(options);
-server.register(actions.example);
+var logger = require('./logger');
+
+server.logger(logger)
+  .register(actions.example)
+  .start();
 
 function shutdown(sig) {
   server.shutdown(5000).then(function () {
-    console.log('shutdown');
     process.exit();
-  }).catch(function (err) {
-    console.log('shutdown: ', err || '');
+  }).catch(function () {
+    process.exit(-1);
   });
 }
 

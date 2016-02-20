@@ -19,6 +19,7 @@
   "dependencies": {
     "bluebird": "^3.3.1",
     "kue": "^0.10.5",
+    "log4js": "^0.6.31",
     "toml": "^2.3.0",
     "toml-require": "^1.1.0"
   }
