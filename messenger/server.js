@@ -1,4 +1,5 @@
 var kue = require('kue');
+var Promise = require('bluebird');
 
 function MessengerServer(options) {
   this.server = kue.createQueue(options);
@@ -14,6 +15,19 @@ MessengerServer.prototype.registerAll = function (processors) {
     this.server.process(processor.type, processor.action);
   }, this);
   return this;
+}
+
+MessengerServer.prototype.shutdown = function (delay) {
+  var self = this;
+
+  return new Promise(function (resolve, reject) {
+    self.server.shutdown(delay, function(err) {
+      if (err) {
+        return reject(err);
+      }
+      resolve();
+    });
+  });
 }
 
 module.exports = function (options) {
