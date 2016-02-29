@@ -8,6 +8,7 @@ var consumer = kue.createQueue({
 
 consumer.process('example', function (job, done) {
   job.log('ok');
+  console.log('ok');
   done();
 });
 consumer.watchStuckJobs();
