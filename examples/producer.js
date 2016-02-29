@@ -7,7 +7,7 @@ var producer = kue.createQueue({
 });
 
 producer.create('example', {})
-  .delay(1000)
+  .delay(10000)
   .removeOnComplete(true)
   .save(function (err) {
     if (err) {

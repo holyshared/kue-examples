@@ -12,3 +12,4 @@ consumer.process('example', function (job, done) {
   done();
 });
 consumer.watchStuckJobs();
+kue.app.listen(3000);
