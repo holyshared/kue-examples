@@ -56,3 +56,13 @@ consumer.process('example', function (job, done) {
 consumer.watchStuckJobs();
 kue.app.listen(3000);
 ```
+
+## Examples
+
+キューに登録する
+
+	node examples/producer.js
+
+キューを消費する
+
+	node examples/consumer.js
