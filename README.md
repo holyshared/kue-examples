@@ -1,5 +1,7 @@
 # kue-examples
 
+![lkue image](https://raw.githubusercontent.com/holyshared/kue-examples/master/kue.png)
+
 ## Requirements
 
 * Redis
